@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb", 
+            "miDebuggerPath": "/usr/bin/gdb", //Check and write
+            "setupCommands": [
+                {
+                    "description": "gdb Enable reformatting of",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "build" // tasks.jsonの"label"Write tag valueく
+        }
+    ]
+}
